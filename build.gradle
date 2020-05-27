@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.gretty' version '3.0.2'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    //providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+}
+
+//gradle wrapper --gradle-version=6.4.1
