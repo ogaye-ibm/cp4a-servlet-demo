@@ -3,7 +3,9 @@ plugins {
     id 'war'
     id 'org.gretty' version '3.0.2'
 }
-
+ war{
+     archiveName = 'HelloServlet.war'
+ }
 group 'org.example'
 version '1.0-SNAPSHOT'
 

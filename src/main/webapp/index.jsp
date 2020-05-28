@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  Hello CP4A Chapter from index.jsp
   </body>
 </html>
