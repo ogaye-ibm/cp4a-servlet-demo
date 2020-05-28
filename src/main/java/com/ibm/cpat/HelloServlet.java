@@ -14,31 +14,36 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-//@WebServlet(name = "HelloServlet", urlPatterns = {"/HelloServlet"}, loadOnStartup = 0)
 public class HelloServlet extends HttpServlet {
+//WebServlet(name = "HelloServlet", urlPatterns = {"/HelloServlet"}, loadOnStartup = 1)
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
         writer.println("Hello CP4A Chapter. Count is: " + callDb());
     }
 
-    protected int callDb () {
-        int count = 0;
+    protected String callDb () {
+        String result = null;
+
         try {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:comp/env");
-            DataSource ds = (DataSource) envContext.lookup("jdbc/helloServletDS");
+            DataSource ds = (DataSource) envContext.lookup("jdbc/HelloServletDS");
+
             Connection conn = ds.getConnection();
             Statement statement = conn.createStatement();
             String sql = "select count(*) from BLUADMIN.supplier";
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
-                count = rs.getInt(1);
+                result = rs.getString(1);
                 System.out.println(String.format("************* Count #%d:", rs.getInt(1)));
             }
         } catch (Exception catchAll) {
-            catchAll.printStackTrace();
+            result =  "Failed to connect to db [" + catchAll.getMessage() + "]";
         }
-        return count;
+
+        return result;
     }
 }
+
+

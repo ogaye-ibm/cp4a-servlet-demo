@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  Hello CPATers
+  Hello CPATers from index.jsp
   </body>
 </html>
