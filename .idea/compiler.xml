@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="cp4a-servlet-demo.main" target="13" />
+      <module name="cp4a-servlet-demo.test" target="13" />
+      <module name="Hello.main" target="13" />
+      <module name="Hello.test" target="13" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
