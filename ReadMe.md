@@ -3,7 +3,7 @@ RUN on gretty, the embedded http server
 ```bash 
 gradle wrapper --gradle-version=6.4.1
 ./gradlew appRun
- http://localhost:8080/cp4a-servlet-demo/hello
+ http://localhost:8080/HelloServlet/hello
 ```
 BUILD WAR
 ```bash 
