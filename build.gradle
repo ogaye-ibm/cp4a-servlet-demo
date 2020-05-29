@@ -9,8 +9,6 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-//sourceCompatibility = 1.13
-//targetCompatibility = 1.13
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
