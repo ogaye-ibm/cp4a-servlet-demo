@@ -10,3 +10,9 @@ BUILD WAR
 ./gradlew clean build
 ```
 War file will be generated under buid/libs
+
+# Branch data-access
+This version of the Servlet accesses a data base and fetches a table to display data.
+This version requires configuration of a datasource
+# Branch data-access-annotation (WIP)
+Same as branch data-access just using annotation instead of xml descriptor files
